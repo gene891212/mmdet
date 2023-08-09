@@ -121,3 +121,6 @@ work_dirs/
 *.pth
 *.py~
 *.sh~
+
+neudet-dataset
+outputs/

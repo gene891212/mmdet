@@ -29,3 +29,20 @@ class VOCDataset(XMLDataset):
             self._metainfo['dataset_type'] = 'VOC2012'
         else:
             self._metainfo['dataset_type'] = None
+
+
+@DATASETS.register_module()
+class NeudetDataset(XMLDataset):
+    """Dataset for PASCAL VOC."""
+
+    METAINFO = {
+        'classes':
+        ('crazing', 'inclusion', 'patches', 
+         'pitted_surface', 'rolled-in_scale', 'scratches'),
+        # palette is a list of color tuples, which is used for visualization.
+        'palette': [(106, 0, 228), (119, 11, 32), (165, 42, 42), (0, 0, 192),
+                    (197, 226, 255), (0, 60, 100)]
+    }
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)

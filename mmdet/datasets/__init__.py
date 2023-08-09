@@ -12,7 +12,7 @@ from .openimages import OpenImagesChallengeDataset, OpenImagesDataset
 from .samplers import (AspectRatioBatchSampler, ClassAwareSampler,
                        GroupMultiSourceSampler, MultiSourceSampler)
 from .utils import get_loading_pipeline
-from .voc import VOCDataset
+from .voc import VOCDataset, NeudetDataset
 from .wider_face import WIDERFaceDataset
 from .xml_style import XMLDataset
 
@@ -23,5 +23,5 @@ __all__ = [
     'MultiImageMixDataset', 'OpenImagesDataset', 'OpenImagesChallengeDataset',
     'AspectRatioBatchSampler', 'ClassAwareSampler', 'MultiSourceSampler',
     'GroupMultiSourceSampler', 'BaseDetDataset', 'CrowdHumanDataset',
-    'Objects365V1Dataset', 'Objects365V2Dataset'
+    'Objects365V1Dataset', 'Objects365V2Dataset', 'NeudetDataset'
 ]
